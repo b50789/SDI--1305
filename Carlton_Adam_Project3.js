@@ -19,29 +19,7 @@ console.log("My family is my favorite part of life, " + myFamily + ".");
 console.log("I have about " + myLife + " different things going on in my life.");
 
 
-// JSON Data
-var tSpent = {
-    "myPeeps": {
-        "peep1": {
-            "name": "Ashley",
-            "console": "Wife"
-        },
-        "peep2": {
-            "name": "Brian-Austin",
-            "console": "Oldest Son"
-        },
-        "peep3": {
-            "name": "Ty",
-            "console": "Son"
-        },
-        "peep4": {
-            "name": "Gracey",
-            "console": "Daughter"
-        }
-    }
-};
 
-console.log( tSpent.myPeeps );
 
 // Method Procedure
 
