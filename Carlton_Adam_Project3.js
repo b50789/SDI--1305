@@ -19,7 +19,29 @@ console.log("My family is my favorite part of life, " + myFamily + ".");
 console.log("I have about " + myLife + " different things going on in my life.");
 
 
+// JSON Data
+var tSpent = {
+    "myPeeps": {
+        "peep1": {
+            "name": "Ashley",
+            "console": "Wife"
+        },
+        "peep2": {
+            "name": "Brian-Austin",
+            "console": "Oldest Son"
+        },
+        "peep3": {
+            "name": "Ty",
+            "console": "Son"
+        },
+        "peep4": {
+            "name": "Gracey",
+            "console": "Daughter"
+        }
+    }
+};
 
+console.log( tSpent.myPeeps );
 
 // Method Procedure
 
@@ -117,13 +139,6 @@ var spentTime = {
     
 };
 
-console.log("I have spent time with my Children for " + spentTime.Children + " minutes.");
-console.log("I have spent time with my Mom for " + spentTime.Mom + " minutes.");
-console.log("I have spent time with my Wife for " + spentTime.Wife + " minutes.");
-console.log("Which make this a total of " + spentTime.timeSpent() + " hours.");
-console.log("I might just spend more time with my Children.");
-
-spentTime.changeTime(90);
 
 console.log("Which now makes a total of " + spentTime.timeSpent() + " hours.");
 
