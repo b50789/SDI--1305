@@ -14,7 +14,7 @@ var myFamily = [" My Wife-Ashley ", " My Oldest-Brian ", " My Middle-Ty ", " My 
 var timeWithFamily = [60, 45, 45, 60, 30]
 var freeTime = true;
 
-console.log("My name is " + myName + ", it is " + freeTime + " I enjoy spending lots of time with the Family, I really do.");
+console.log("My name is " + myName + ", it is " + freeTime + " I like to spend time with my family.");
 console.log("My family is my favorite part of life, " + myFamily + ".");
 console.log("I have about " + myLife + " different things going on in my life.");
 
