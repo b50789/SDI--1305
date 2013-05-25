@@ -121,32 +121,6 @@ var weHadFun = playWithKids(myFamily, timeWithFamily);
 console.log("I spent time " + weHadFun + " until I was done.");
 
 
-// Method with Accessor and Mutator
-
-var spentTime = {
-    
-    "Children": 60,
-    "Mom": 30,
-    "Wife": 120,
-    "timeSpent": function() {
-        var totalTime = this.Children + this.Mom + this.Wife;
-        var intoHours = totalTime / 60;
-        return intoHours;
-    },
-    "changeTime": function(moreTime){
-        this.Children = moreTime;
-    }
-    
-};
-
-
-console.log("Which now makes a total of " + spentTime.timeSpent() + " hours.");
-
-// Ending
-
-console.log("Well had had a great time with the Family, but now I must do my schoolwork.");
-
-// Done
 
 
 
