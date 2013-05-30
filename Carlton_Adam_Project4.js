@@ -57,28 +57,26 @@ var myLib = function () {
 	return Number(numbers);
     }
     
+  
     
     
-   //Array Find Smallest Value
-   //Find the smallest value in an array that is greater than a given number
-    var smallArray = function(array,newNum){
-	var len = this.length;
-	if (typeof array != "function")
-	throw new TypeError();
-    var res = new Array();
-    var thisp = arguments[1];
-    for (var i = 0; i < len; i++)
-    {
-      if (i in this)
-      {
-        var val = this[i];
-        if (array.call(thisp, val, i, this))
-          res.push(val);
-      }
-    }
-    return res;
-  }
-    
+    //Title Case String
+    //Title-case a string /(split into words, then uppercase the first letter of each word/)
+    var firstLetter = function(change){
+	var split = change.split();
+	var done = "";
+	for (var i = 0,
+		j = split.length;
+		i < j;
+		i++){
+	    var upperCase = split[i].replace(split[i].charAt(0),
+			    (split[i].charAt0)).toUpperCase();
+	    done = done.concat(upperCase + " ADAM ");
+	    return done;
+	}
+	}
+   
+
     
     
     
@@ -90,7 +88,7 @@ var myLib = function () {
 	    "abcSeparator": abcSeparator,
 	    "numDecimal": numDecimal,
 	    "numbReturn": numbReturn,
-	    "smallArray": smallArray,
+	    "firstLetter": firstLetter
     }
     
     
@@ -109,7 +107,8 @@ console.log("Is this a valid url string? " + newLib.urlCheck("http://www.bluegra
 console.log("a,b,c = / = " + newLib.abcSeparator("a,b,c","/") + "!");
 console.log(newLib.numDecimal(2.10,2));
 console.log("The returned number " + newLib.numbReturn ("42") + "!");
-console.log(newLib.smallArray);
+console.log("It is " + newLib.firstLetter ("done") + "!");
+
 
 
 
