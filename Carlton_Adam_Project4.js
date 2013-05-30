@@ -42,10 +42,27 @@ var myLib = function () {
    }
     
     
+    //Specific Number of Decimal Places
+    //Format a number to use a specific number of decimal places, as for money: 2.1 to 2.10
+    var numDecimal = function(numb,decimal){
+	var num = numb.toFixed(decimal)
+	    return num;
+	
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+ 
     return {
 	    "phoneNum": phoneNum,
 	    "urlCheck": urlCheck,
 	    "abcSeparator": abcSeparator,
+	    "numDecimal": numDecimal,
     }
     
     
@@ -62,7 +79,7 @@ var newLib = myLib();
 console.log("Is this a valid phone number? " + newLib.phoneNum("123-456-7890") +"!");
 console.log("Is this a valid url string? " + newLib.urlCheck("http://www.bluegrasspcrepairs.com") + "!");
 console.log("a,b,c = / = " + newLib.abcSeparator("a,b,c","/") + "!");
-
+console.log(newLib.numDecimal(2.10,2));
 
 
 
