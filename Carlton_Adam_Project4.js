@@ -54,7 +54,7 @@ var myLib = function () {
     //Return the Number Value
     //Given a string version of a number such as "42", return the value as an actual Number, such as 42.
     var numbReturn = function(numbers){
-	return nValue(numbers);
+	return Number(numbers);
     }
     
     
@@ -108,7 +108,7 @@ console.log("Is this a valid phone number? " + newLib.phoneNum("123-456-7890") +
 console.log("Is this a valid url string? " + newLib.urlCheck("http://www.bluegrasspcrepairs.com") + "!");
 console.log("a,b,c = / = " + newLib.abcSeparator("a,b,c","/") + "!");
 console.log(newLib.numDecimal(2.10,2));
-concole.log("The returned number " + newLib.numbReturn ("42") + "!");
+console.log("The returned number " + newLib.numbReturn ("42") + "!");
 console.log(newLib.smallArray);
 
 
