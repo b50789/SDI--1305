@@ -21,13 +21,21 @@ var myLib = function () {
     }
     
     
-    
+    //URL String Validation
+    var urlCheck = function(url){
+	if (url.substring(0,7) === "http://" || url.substring(0,8) === "https://") {
+	    return true;
+	}else{
+	    return false;
+	}
+    }
     
     
     
     
     return {
 	    "phoneNum": phoneNum,
+	    "urlCheck": urlCheck,
     }
     
     
@@ -42,8 +50,7 @@ var myLib = function () {
 var newLib = myLib();
 
 console.log("Is this a valid phone number? " + newLib.phoneNum("123-456-7890") +"!");
-
-
+console.log("Is this a valid url string? " + newLib.urlCheck("http://www.bluegrasspcrepairs.com") + "!");
 
 
 
