@@ -9,13 +9,12 @@
 var myLib = function () {
     
     //Phone Number Validation
-    var phoneNum = Function(number){
+    var phoneNum = function(number){
 	var numberCheck = isNaN(number[0,1,2,4,5,6,8,9,10,11]);
 	
 	if (numberCheck === false && number[3,7]=== "-"){
-	    return true;{
-	    //code
-	} esle {
+	    return true;
+	} else {
 	    return false;
 	}
 	
@@ -27,7 +26,9 @@ var myLib = function () {
     
     
     
-    
+    return {
+	    "phoneNum": phoneNum,
+    }
     
     
     
@@ -36,7 +37,11 @@ var myLib = function () {
 
 
 
+//Returns
 
+var newLib = myLib();
+
+console.log("Is this a valid phone number? " + newLib.phoneNum("123-456-7890") +"!");
 
 
 
