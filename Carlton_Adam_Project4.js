@@ -51,7 +51,24 @@ var myLib = function () {
     }
     
     
-    
+   
+    var smallArray = function(array,newNum){
+	var len = this.length;
+	if (typeof array != "function")
+	throw new TypeError();
+    var res = new Array();
+    var thisp = arguments[1];
+    for (var i = 0; i < len; i++)
+    {
+      if (i in this)
+      {
+        var val = this[i];
+        if (array.call(thisp, val, i, this))
+          res.push(val);
+      }
+    }
+    return res;
+  }
     
     
     
@@ -63,6 +80,7 @@ var myLib = function () {
 	    "urlCheck": urlCheck,
 	    "abcSeparator": abcSeparator,
 	    "numDecimal": numDecimal,
+	    "smallArray": smallArray,
     }
     
     
@@ -80,6 +98,7 @@ console.log("Is this a valid phone number? " + newLib.phoneNum("123-456-7890") +
 console.log("Is this a valid url string? " + newLib.urlCheck("http://www.bluegrasspcrepairs.com") + "!");
 console.log("a,b,c = / = " + newLib.abcSeparator("a,b,c","/") + "!");
 console.log(newLib.numDecimal(2.10,2));
+console.log(newLib.smallArray);
 
 
 
